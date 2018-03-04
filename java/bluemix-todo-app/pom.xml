@@ -23,6 +23,19 @@
   <version>1.0-SNAPSHOT</version>
   <name>bluemix-todo-app</name>
 
+  <distributionManagement>
+        <repository>
+            <id>nexus</id>
+            <name>Releases</name>
+            <url>http://devops.examplecorp.es:8081/nexus/content/repositories/releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>nexus</id>
+            <name>Snapshots</name>
+            <url>http://devops.examplecorp.es:8081/nexus/content/repositories/snapshots/</url>
+        </snapshotRepository>
+  </distributionManagement>
+
   <!-- ====================================================================== -->
   <!-- B U I L D -->
   <!-- ====================================================================== -->
