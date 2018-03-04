@@ -223,7 +223,7 @@
             <version>${cf-maven-plugin.version}</version>
             <configuration>
               <server>Bluemix</server>
-              <target>https://api.ng.bluemix.net</target>
+              <target>https://api.eu-gb.bluemix.net</target>
               <appname>bluemix-todo-java-mongo</appname>
               <url>${app-url}</url>
               <org>${org}</org>
@@ -232,8 +232,8 @@
               <services>
                 <service>
                   <name>todo-mongo-db</name>
-                  <label>mongodb</label>
-                  <plan>100</plan>
+                  <label>compose-for-mongodb</label>
+                  <plan>Standard</plan>
                 </service>
               </services>
             </configuration>
