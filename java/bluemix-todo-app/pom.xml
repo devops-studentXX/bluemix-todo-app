@@ -20,13 +20,14 @@
   <groupId>net.bluemix.todo</groupId>
   <artifactId>bluemix-todo-app</artifactId>
   <packaging>war</packaging>
-  <version>1.0-SNAPSHOT</version>
+  <version>1.0</version>
   <name>bluemix-todo-app</name>
 
   <scm>
     <connection>scm:git:git@github.com:devops-studentXX/bluemix-todo-app.git</connection>
     <url>scm:git:git@github.com:devops-studentXX/bluemix-todo-app.git</url>
     <developerConnection>scm:git:git@github.com:devops-studentXX/bluemix-todo-app.git</developerConnection>
+    <tag>v1.0</tag>
   </scm>
 
   <distributionManagement>
@@ -68,7 +69,7 @@
             <configuration>
               <tasks>
                 <copy todir="${project.build.directory}/bluemix-todo-app">
-                  <fileset dir="${project.basedir}../../../frontend"/>
+                  <fileset dir="${project.basedir}../../../frontend" />
                 </copy>
               </tasks>
             </configuration>
