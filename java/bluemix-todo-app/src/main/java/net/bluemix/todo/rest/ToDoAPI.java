@@ -134,7 +134,7 @@ public class ToDoAPI {
    * REST API example:
    * <code>
    * POST http://localhost:8080/api/todos
-   * <code>
+   * </code>
    * POST Body:
    * <code>
    * {
