@@ -24,9 +24,9 @@
   <name>bluemix-todo-app</name>
 
   <scm>
-    <connection>scm:git:git@github.com:devops-studentXX/devops-student01-myapp.git</connection>
-    <url>scm:git:git@github.com:devops-studentXX/devops-student01-myapp.git</url>
-    <developerConnection>scm:git:git@github.com:devops-studentXX/devops-student01-myapp.git</developerConnection>
+    <connection>scm:git:git@github.com:devops-studentXX/bluemix-todo-app.git</connection>
+    <url>scm:git:git@github.com:devops-studentXX/bluemix-todo-app.git</url>
+    <developerConnection>scm:git:git@github.com:devops-studentXX/bluemix-todo-app.git</developerConnection>
   </scm>
 
   <distributionManagement>
@@ -77,6 +77,25 @@
             </goals>
           </execution>
         </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.sonatype.plugins</groupId>
+        <artifactId>nexus-staging-maven-plugin</artifactId>
+        <version>1.5.1</version>
+        <executions>
+          <execution>
+            <id>default-deploy</id>
+            <phase>deploy</phase>
+            <goals>
+              <goal>deploy</goal>
+            </goals>
+          </execution>
+        </executions>
+        <configuration>
+          <serverId>nexus</serverId>
+          <nexusUrl>xhttp://devops.examplecorp.es:8081/nexus/content/repositories/snapshots/</nexusUrl>
+          <skipStaging>true</skipStaging>
+        </configuration>
       </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
@@ -194,6 +213,32 @@
   <!-- P R O F I L E S -->
   <!-- ====================================================================== -->
   <profiles>
+    <profile>
+      <id>releases</id>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>org.sonatype.plugins</groupId>
+            <artifactId>nexus-staging-maven-plugin</artifactId>
+            <version>1.5.1</version>
+            <executions>
+              <execution>
+                <id>default-deploy</id>
+                <phase>deploy</phase>
+                <goals>
+                  <goal>deploy</goal>
+                </goals>
+              </execution>
+            </executions>
+            <configuration>
+              <serverId>nexus</serverId>
+              <nexusUrl>http://devops.examplecorp.es:8081/nexus/content/repositories/releases/</nexusUrl>
+              <skipStaging>true</skipStaging>
+            </configuration>
+         </plugin>
+       </plugins>
+      </build>
+    </profile>
     <!-- profile to run an embedded jetty instance -->
     <profile>
       <id>run</id>
