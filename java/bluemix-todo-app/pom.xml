@@ -20,14 +20,14 @@
   <groupId>net.bluemix.todo</groupId>
   <artifactId>bluemix-todo-app</artifactId>
   <packaging>war</packaging>
-  <version>1.0</version>
+  <version>1.1-SNAPSHOT</version>
   <name>bluemix-todo-app</name>
 
   <scm>
     <connection>scm:git:git@github.com:devops-studentXX/bluemix-todo-app.git</connection>
     <url>scm:git:git@github.com:devops-studentXX/bluemix-todo-app.git</url>
     <developerConnection>scm:git:git@github.com:devops-studentXX/bluemix-todo-app.git</developerConnection>
-    <tag>v1.0</tag>
+    <tag>HEAD</tag>
   </scm>
 
   <distributionManagement>
